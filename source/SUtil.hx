@@ -148,6 +148,7 @@ class SUtil
 	 */
                 public static function getStorageDirectory():String
 	{
+	{
 		#if android
 		return Environment.getExternalStorageDirectory() + '/' + '.' + Application.current.meta.get('file') + '/' + 'files' + '/';
 		#else
