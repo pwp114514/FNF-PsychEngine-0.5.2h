@@ -148,21 +148,12 @@ class SUtil
 	 */
                 public static function getStorageDirectory():String
 	{
-	{
 		#if android
 		return Environment.getExternalStorageDirectory() + '/' + '.' + Application.current.meta.get('file') + '/' + 'files' + '/';
 		#else
 		return '';
 		#end
 	}
-		return daPath;
-		#elseif ios
-		return LimeSystem.applicationStorageDirectory;
-		#else
-		return '';
-		#end
-	}
-
 	/**
 	 * Uncaught error handler, original made by: sqirra-rng
 	 */
