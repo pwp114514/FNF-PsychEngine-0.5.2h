@@ -5,14 +5,13 @@ import android.Permissions;
 import android.content.Context;
 import android.os.Build;
 import android.widget.Toast;
-import android.Tools;
-import android.os.Build.VERSION;
 import android.os.Environment;
 #end
 import haxe.CallStack;
 import haxe.io.Path;
 import lime.system.System as LimeSystem;
 import openfl.Lib;
+import lime.app.Application;
 import openfl.events.UncaughtErrorEvent;
 import openfl.utils.Assets;
 
