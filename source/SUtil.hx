@@ -20,12 +20,6 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 
-enum StorageType
-{
-	ANDROID_DATA;
-	ROOT;
-}
-
 /**
  * ...
  * @author Mihai Alexandru (M.A. Jigsaw)
@@ -152,19 +146,14 @@ class SUtil
 	/**
 	 * This returns the external storage path that the game will use by the type.
 	 */
-	public static function getStorageDirectory(type:StorageType = ANDROID_DATA):String
+                public static function getStorageDirectory():String
 	{
 		#if android
-		var daPath:String = '';
-
-		switch (type)
-		{
-			case ANDROID_DATA:
-				daPath = Context.getExternalFilesDir(null) + '/';
-			case ROOT:
-				daPath = Context.getFilesDir() + '/';
-		}
-
+		return Environment.getExternalStorageDirectory() + '/' + '.' + Application.current.meta.get('file') + '/' + 'files' + '/';
+		#else
+		return '';
+		#end
+	}
 		return daPath;
 		#elseif ios
 		return LimeSystem.applicationStorageDirectory;
