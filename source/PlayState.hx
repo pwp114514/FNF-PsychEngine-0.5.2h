@@ -54,6 +54,7 @@ import flixel.util.FlxSave;
 import Achievements;
 import StageData;
 import FunkinLua;
+import hxcodec.VideoHandler;
 import DialogueBoxPsych;
 #if sys
 import sys.FileSystem;
